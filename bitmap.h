@@ -18,7 +18,7 @@ typedef unsigned char bitmap_t;
  * 
  * @param bitmap	:pointer to a bitmap
  * @param index		:position of the bit in the bitmap (left to right, 0 to 7)
- * @return 			:1 if succeeds, 0 if don't
+ * @return 		:1 if succeeds, 0 if don't
  *  
  */
  int change_bitmap(bitmap_t *bitmap, int index)
@@ -32,7 +32,7 @@ typedef unsigned char bitmap_t;
  * 
  * @param bitmap :pointer to a bitmap
  * @param index  :position of the bit in the bitmap (left to right, 0 to 7)
- * @return the bit 
+ * @return 	 :the bit you request or -1 if it fails 
  * 
  */
 int get_bitmap(bitmap_t *bitmap, int index)
