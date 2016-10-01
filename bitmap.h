@@ -14,7 +14,7 @@
 
 typedef unsigned char bitmap_t;
 
-/**Description		:Change of set to unset and vice versa
+/**Description		:Change from set to unset and vice versa
  * 
  * @param bitmap	:pointer to a bitmap
  * @param index		:position of the bit in the bitmap (left to right, 0 to 7)
