@@ -26,24 +26,24 @@ int main (void)
 	puts("Initial Bitmap:"); 
 	printBits(sizeof(myBitmap), &myBitmap);
 	
-	change_bitmap(&myBitmap, 0); //set index 0
+	toggle_bitmap(&myBitmap, 0); //set index 0
 	puts("First Bitmap config:");
 	printBits(sizeof(myBitmap), &myBitmap);
 	
-	change_bitmap(&myBitmap, 7); //set index 7
+	toggle_bitmap(&myBitmap, 7); //set index 7
 	puts("Second Bitmap config:");
 	printBits(sizeof(myBitmap), &myBitmap);
 	
-	change_bitmap(&myBitmap, 7); //unset index 7
+	toggle_bitmap(&myBitmap, 7); //unset index 7
 	puts("Third Bitmap config:");
 	printBits(sizeof(myBitmap), &myBitmap);
 	
 	/**
-	 * Remember change_bitmap(...) will return 0(FAIL) if a index is out of range
+	 * Remember toggle_bitmap(...) will return 0(FAIL) if a index is out of range
 	 * So, you can go like this:
 	 * */
 	
-	if(!change_bitmap(&myBitmap, 4)) //success
+	if(!toggle_bitmap(&myBitmap, 4)) //success
 	{
 		puts("Index out of range");
 		return 1;
@@ -51,7 +51,7 @@ int main (void)
 	puts("Fourth Bitmap config:");
 	printBits(sizeof(myBitmap), &myBitmap);
 	
-	if(!change_bitmap(&myBitmap, 23))//fail
+	if(!toggle_bitmap(&myBitmap, 23))//fail
 		puts("Bit 23 = Index out of range");
 	
 	bitmap_bit = get_bitmap(&myBitmap, 0);
