@@ -14,14 +14,14 @@
 
 typedef unsigned char bitmap_t;
 
-/**Description		:Change from set to unset and vice versa
+/**Description		:Toggle bit
  * 
  * @param bitmap	:pointer to a bitmap
  * @param index		:position of the bit in the bitmap (left to right, 0 to 7)
  * @return 		:1 if succeeds, 0 if don't
  *  
  */
- int change_bitmap(bitmap_t *bitmap, int index)
+ int toggle_bitmap(bitmap_t *bitmap, int index)
 {
 	if((index < 0) || (index > 7)) return 0; //fail - index out of range
 	*bitmap = *bitmap ^ (1 << (index & 7));
